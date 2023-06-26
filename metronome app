@@ -1,0 +1,18 @@
+import time
+
+def metronome(measures):
+    for measure in measures:
+        beats, tempo = measure
+        beat_duration = 60 / tempo
+
+        print("Measure:", beats, "/", tempo)
+        for beat in range(beats):
+            print("Beat:", beat + 1)
+            time.sleep(beat_duration)
+
+if __name__ == "__main__":
+    measures = [
+        (7, 8),   # Example measure: 7/8
+        (5, 4)    # Example measure: 5/4
+    ]
+    metronome(measures)
